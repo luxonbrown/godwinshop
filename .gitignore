@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Environment (never commit secrets)
+server/.env
+.env
+
+# Build output
+client/dist/
+server/dist/
+
+# Uploads (runtime files)
+server/uploads/*
+!server/uploads/.gitkeep
+!server/uploads/placeholder.svg
+!server/uploads/shirt-1.jpeg
+!server/uploads/pant-1.jpeg
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
