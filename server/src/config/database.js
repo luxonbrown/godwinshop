@@ -13,7 +13,8 @@ const pool = mysql.createPool({
   charset: 'utf8mb4',
   decimalNumbers: true,
   dateStrings: true,
-  timezone: 'Z'
+  timezone: 'Z',
+  ssl: { rejectUnauthorized: false }
 });
 
 async function withTransaction(callback) {
