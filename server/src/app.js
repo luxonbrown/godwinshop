@@ -9,8 +9,19 @@ const { errorHandler, notFoundHandler } = require('./middleware/errorHandler');
 const app = express();
 
 app.set('trust proxy', 1);
+
+const allowedOrigins = String(config.clientUrl)
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+
 app.use(cors({
-  origin: config.clientUrl,
+  origin(origin, cb) {
+    if (!origin || allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
+      return cb(null, origin);
+    }
+    cb(null, false);
+  },
   credentials: true
 }));
 
