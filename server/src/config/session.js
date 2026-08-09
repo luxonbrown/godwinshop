@@ -38,8 +38,8 @@ function sessionMiddleware() {
     rolling: true,
     cookie: {
       httpOnly: true,
-      secure: config.isProd && config.session.secure,
-      sameSite: config.isProd ? 'lax' : 'lax',
+      secure: config.isProd,
+      sameSite: config.isProd ? 'none' : 'lax',
       maxAge: config.session.maxAge
     }
   });
