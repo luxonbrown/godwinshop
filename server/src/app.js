@@ -17,7 +17,8 @@ const allowedOrigins = String(config.clientUrl)
 
 app.use(cors({
   origin(origin, cb) {
-    if (!origin || allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
+    // 'null' = Electron desktop app (file:// page). Keep the web allowlist intact.
+    if (!origin || origin === 'null' || allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
       return cb(null, origin);
     }
     cb(null, false);

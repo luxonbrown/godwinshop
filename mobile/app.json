@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Godwinshop",
+    "slug": "app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0B0B0B",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0B0B"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.godwinshop.app"
+    },
+    "android": {
+      "package": "com.godwinshop.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#0B0B0B",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": true,
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      "expo-secure-store"
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "19d549b2-7205-4e54-9c24-e82bbb0d68b7"
+      }
+    },
+    "owner": "luxonbrowns-team"
+  }
+}
